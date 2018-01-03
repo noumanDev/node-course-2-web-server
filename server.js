@@ -2,6 +2,8 @@ const express = require('express')
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.port||3001;
+
 //initialize express app
 var app = express();
 
@@ -69,4 +71,4 @@ app.get('/bad', (req, res) => {
 })
 
 //start listning on port
-app.listen(3001, () => { console.log('server is lisning on port 3001'); });
+app.listen(port, () => { console.log(`server is lisning on port ${port}`); });
