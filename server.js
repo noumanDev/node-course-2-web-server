@@ -64,6 +64,15 @@ app.get('/about', (req, res) => {
     });
 });
 
+
+app.get('/projects', (req, res) => {
+    res.render('projects', {
+        pageTitle: 'Projects page'
+
+    });
+});
+
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'sory boi, take your 404'
